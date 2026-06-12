@@ -5,7 +5,7 @@
 ![Platform](https://img.shields.io/badge/Platform-macOS-lightgrey)
 
 ## Demo
-![Terminal Output](screenshot.png)
+![Terminal Output](Screenshot.png)
 
 ## What it does
 Takes an audio file (.mp3 or .wav) as input and separates it into
