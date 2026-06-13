@@ -9,7 +9,9 @@
 
 ## What it does
 Takes an audio file (.mp3 or .wav) as input and separates it into
-individual stems — saved as WAV files on your Desktop.
+individual stems — saved as WAV or MP3 files on your Desktop.
+Stems with no audible content are automatically flagged with an
+`(Inaudible)_` prefix for easy identification.
 
 ## Why I built it
 Old songs always had soul but lacked the technology.
@@ -25,29 +27,28 @@ Apple Silicon M1 or above
 #### Python 3.9.6 or above
 
 #### Libraries
-tkinter (built into Python — no installation needed), torchaudio, torch, demucs
+tkinter (built into Python — no installation needed), torchaudio, torch, demucs, pydub
 
 ## How to install
 
 1. Install Python 3.9.6 or above from https://www.python.org
-
 2. Then choose one of the following options:
 
    **Option A — One click installer (recommended):**
-   ```bash
-      chmod +x run.sh
-      ./run.sh
-   ```
+```bash
+   chmod +x run.sh
+   ./run.sh
+```
    This automatically installs libraries and launches the tool.
 
    **Option B — Manual installation:**
-   ```bash
-   pip3 install demucs torchaudio torch
-   ```
+```bash
+   pip3 install demucs torchaudio torch pydub
+```
    Then launch the tool:
-   ```bash
-      python3 stem_sep.py
-   ```
+```bash
+   python3 stem_sep.py
+```
 
 ## How to use
 
@@ -65,26 +66,33 @@ to the folder containing `stem_sep.py` by doing the following steps:
 python3 stem_sep.py
 ```
 
-4. A file picker window will pop up.
+4. A file picker window will pop up. You have two attempts to select a file.
 
 5. Select your audio file (.mp3 or .wav supported).
 
 6. Choose 4 or 6 stems when prompted:
-   - **4 stems** — drums, bass, vocals, other
-   - **6 stems** — drums, bass, vocals, guitar, piano, other
+   - **4 stems** — percussion, bass, vocals, other
+   - **6 stems** — percussion, bass, vocals, guitar/strings, piano, other
 
-7. After a few minutes, processing completes and stem files
+7. Choose output format when prompted:
+   - **1** — WAV (higher quality, larger file size)
+   - **2** — MP3 (smaller file size)
+
+8. After a few minutes, processing completes and stem files
 appear on your Desktop.
 
 ## Output files
 Once the processing is done, the following files are generated on the Desktop:
 
-- `song_name_drums.wav` — drums and percussion
+- `song_name_percussion.wav` — drums and percussion
 - `song_name_bass.wav` — bass
 - `song_name_other.wav` — strings, sitars, flutes and all other instruments
 - `song_name_vocals.wav` — vocals
-- `song_name_guitar.wav` — guitar (6-stem only)
+- `song_name_guitar_strings.wav` — guitar and string instruments (6-stem only)
 - `song_name_piano.wav` — piano (6-stem only)
+
+Note: Stems with no audible content are automatically renamed with an
+`(Inaudible)_` prefix for easy identification.
 
 ## Planned improvements
 - Windows support
