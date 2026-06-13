@@ -88,7 +88,7 @@ Once the processing is done, the following files are generated on the Desktop:
 
 ## Planned improvements
 - Windows support
-- One click installer for Mac and Windows
+- One click installer for Windows
 - Fine tuning on Indian/Bollywood music
 - Improved stem quality with two pass separation
 - Noise reduction post processing
