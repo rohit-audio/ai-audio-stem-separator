@@ -92,7 +92,6 @@ Once the processing is done, the following files are generated on the Desktop:
 - Fine tuning on Indian/Bollywood music
 - Improved stem quality with two pass separation
 - Noise reduction post processing
-- MP3 output option alongside WAV
 
 ## Acknowledgements
 Built with assistance from Claude (Anthropic) and
