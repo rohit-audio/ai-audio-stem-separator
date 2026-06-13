@@ -30,11 +30,24 @@ tkinter (built into Python — no installation needed), torchaudio, torch, demuc
 ## How to install
 
 1. Install Python 3.9.6 or above from https://www.python.org
-2. Install required libraries by running this command in your terminal:
 
-```bash
-pip install demucs torchaudio torch
-```
+2. Then choose one of the following options:
+
+   **Option A — One click installer (recommended):**
+   ```bash
+      chmod +x run.sh
+      ./run.sh
+   ```
+   This automatically installs libraries and launches the tool.
+
+   **Option B — Manual installation:**
+   ```bash
+   pip3 install demucs torchaudio torch
+   ```
+   Then launch the tool:
+   ```bash
+      python3 stem_sep.py
+   ```
 
 ## How to use
 
